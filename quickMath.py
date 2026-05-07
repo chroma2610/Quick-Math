@@ -18,7 +18,7 @@ def generate_problem():
 
 while True:
     expression = generate_problem()
-    answer = eval(expression)
+    answer = round(eval(expression), 2)
     response = input("solve: " + expression + "\n")
     try:
         if float(response) == answer:
