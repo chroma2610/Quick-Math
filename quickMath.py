@@ -20,7 +20,12 @@ while True:
     expression = generate_problem()
     answer = eval(expression)
     response = input("solve: " + expression + "\n")
-    if float(response) == answer:
-        print("you done it")
-    else:
-        print("you failed, the answer was " + answer)
+    try:
+        if float(response) == answer:
+            print("you done it")
+        else:
+            print("you failed, the answer was " + answer)
+    except ValueError:
+        print("invalid, the answer was: " + answer)
+
+    
